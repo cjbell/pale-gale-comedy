@@ -1,0 +1,39 @@
+.portfolio {
+  @extend %section;
+  padding: 4em 0;
+}
+
+.portfolio__inner {
+  @extend %section__inner;
+  @include clearfix;
+}
+
+.portfolio__item {
+  margin-bottom: 2.5em;
+
+  @include media-query($tablet-min-width) {
+    width: 45%;
+    float: left;
+    margin-left: 2.5%; margin-right: 2.5%;
+  }
+}
+
+.portfolio__item__title {
+  @extend %primary-title;
+  font-size: em(16);
+  color: lighten($highlight, 10%);
+  margin: 0;
+
+  &:after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    margin: .75em 0 1em;
+    background-color: lighten($highlight, 60%);
+  }
+}
+
+.portfolio__item__inner {
+  @include fluid-media-wrapper(16 9);
+}

@@ -1,0 +1,32 @@
+$headline-font: 'Open Sans', sans-serif;
+
+%primary-title {
+  font-family: $headline-font;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 .5em 0;
+}
+
+%section-title {
+  @extend %primary-title;
+  font-size: 24px;
+
+  @include media-query($tablet-min-width) {
+    font-size: 28px;
+  }
+}
+
+%body-copy {
+  font-family: 'Gentium Basic', serif;
+  letter-spacing: 1px;
+  color: $highlight;
+
+  a {
+    color: inherit;
+  }
+}
+
+body {
+  @extend %body-copy;
+}

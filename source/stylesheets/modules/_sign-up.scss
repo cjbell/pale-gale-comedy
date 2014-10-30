@@ -1,0 +1,113 @@
+.sign-up {
+}
+
+.sign-up__header {
+  background-color: $highlight;
+  padding: em(10) 0 em(5);
+  text-align: center;
+}
+
+.sign-up__header__title {
+  @extend %primary-title;
+  color: #fff;
+  font-size: em(14);
+
+  a {
+    @extend %unstyled-anchor;
+  }
+}
+
+.sign-up__inner {
+  padding: em(50) em(10);
+  max-width: em(450);
+  margin: 0 auto;
+}
+
+.sign-up__title {
+  @extend %primary-title;
+  font-size: em(22);
+  margin: 0 0 em(10, 22);
+}
+
+.sign-up__copy {
+  @extend %body-copy;
+  margin-top: 0;
+}
+
+.sign-up-form {
+  margin-top: em(25);
+}
+
+.sign-up-form__fieldset {
+  border: none;
+  padding: 0;
+}
+
+.sign-up-form__btn {
+  @extend %button;
+  border-color: $highlight;
+  background-color: $highlight;
+  color: #fff;
+  margin-top: em(10);
+
+  @include hover {
+    color: #fff;
+    background-color: darken($highlight, 20%);
+  }
+}
+
+.sign-up-form__label {
+  @extend %primary-title;
+  color: $offset-highlight;
+  display: block;
+  text-align: left;
+  font-size: em(14);
+
+  &.error {
+    color: #990000;
+  }
+}
+
+.sign-up-form__input {
+  @extend %unstyled-input;
+  border: 1px solid $offset-highlight;
+  width: 100%;
+  padding: em(10) em(8);
+
+  &.error {
+    border-color: #990000;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.js-sign-up-content {
+  max-width: em(700);
+}
+
+.sign-up-content__gum-road__btn {
+  @extend %button;
+  border-color: $highlight;
+  display: block;
+  text-align: center;
+  margin-top: em(20);
+
+
+  @include hover {
+    background-color: $highlight;
+    color: #fff;
+  }
+}
+
+.sign-up-content__video {
+  @include fluid-media-wrapper;
+  margin-top: em(25);
+}
+
+@include media-query($tablet-min-width) {
+  .sign-up__inner {
+    padding: em(100) em(10);
+  }
+}

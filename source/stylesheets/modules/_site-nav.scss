@@ -1,0 +1,45 @@
+.site-nav {
+  @extend %l-site-width;
+  text-align: right;
+  padding-top: 1em; padding-bottom: 1em;
+}
+
+.site-nav__item {
+  @include transition(.25s);
+  @extend %unstyled-anchor;
+  @extend %primary-title;
+  color: #ccc;
+  margin-right: .75em;
+  font-size: em(11);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media-query($tablet-min-width) {
+    font-size: em(14);
+    margin-right: 1em;
+  }
+
+  @include hover {
+    color: #fff;
+  }
+}
+
+.site-nav__item--home {
+  font-weight: bold;
+  opacity: 0;
+  float: left;
+  color: #fff;
+  padding-top: 2px;
+  @include transform(translateY(-80px));
+
+  @include media-query($tablet-min-width) {
+    padding-top: 0;
+  }
+
+  .has-scrolled & {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}

@@ -1,0 +1,50 @@
+.about {
+  @extend %section;
+  background-color: lighten($highlight, 10%);
+  color: #fff;
+}
+
+.about__inner {
+  @extend %section__inner;
+  @include clearfix;
+  text-align: center;
+}
+
+.about__image {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.about__title {
+  @extend %section-title;
+}
+
+.about__content {
+  color: lighten($highlight, 60%);
+  max-width: 375px;
+  line-height: 1.4;
+
+  a:hover {
+    color: #fff;
+  }
+}
+
+@include media-query($tablet-min-width) {
+  .about__image {
+    width: 45%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    float: left;
+  }
+
+  .about__content {
+    font-size: em(18);
+  }
+
+  .about__copy {
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    text-align: left;
+  }
+}

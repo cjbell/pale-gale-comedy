@@ -1,0 +1,28 @@
+/**
+ * Allows vertical centering of elements with unknown dimensions.
+ *
+ * @link http://css-tricks.com/centering-in-the-unknown
+ */
+
+%vertical-align {
+}
+
+%vertical-align:after,
+%vertical-align__child {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%vertical-align:after {
+  content: "";
+  height: 100%;
+}
+
+/**
+ * The element to be vertically centred.
+ *
+ * @requires {placeholder} vertical-align
+ */
+
+%vertical-align__child {
+}

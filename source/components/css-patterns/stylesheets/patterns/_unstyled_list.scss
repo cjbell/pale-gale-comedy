@@ -1,0 +1,8 @@
+/**
+ * A list without styling.
+ */
+
+%unstyled-list {
+  @extend %unbulleted-list;
+  margin: 0;
+}

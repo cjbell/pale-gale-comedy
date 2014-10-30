@@ -1,0 +1,25 @@
+/**
+ * Extends `%unstyled-list` to remove the default styles from a list and its children, and floats all the children left.
+ *
+ * @requires {placeholder} clearfix-with-overflow
+ * @requires {placeholder} unstyled-list
+ */
+
+%float-list {
+  @extend %clearfix-with-overflow;
+  @extend %unstyled-list;
+}
+
+%float-list__item, // <= IE8
+%float-list > * {
+  float: left;
+}
+
+/**
+ * Use on list items in <= IE8
+ *
+ * @requires {placeholder} float-list
+ */
+
+%float-list__item {
+}

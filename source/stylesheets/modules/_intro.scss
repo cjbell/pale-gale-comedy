@@ -1,0 +1,53 @@
+.intro {
+  @extend %section;
+  padding: 8em 0 4em;
+  background-color: $highlight;
+  color: #fff;
+
+  @include media-query($tablet-min-width) {
+    padding: 12em 0 8em;
+  }
+}
+
+.intro__inner {
+  @extend %section__inner;
+  text-align: center;
+}
+
+.intro__title {
+  @extend %primary-title;
+  font-size: em(32);
+  margin: 0;
+
+  @include media-query($tablet-min-width) {
+    font-size: em(50);
+  }
+}
+
+.intro__sub-line {
+  font-size: 20px;
+  font-style: italic;
+  color: $offset-highlight;
+  display: block;
+}
+
+.intro__title,
+.intro__sub-line,
+.intro__cta {
+  @include animation(fadeInAndMoveUp .25s .25s ease-in);
+}
+
+.intro__cta {
+  @extend %button;
+}
+
+@include keyframes(fadeInAndMoveUp) {
+  from {
+    @include transform(translateY(20px));
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}

@@ -1,0 +1,25 @@
+.social {
+  padding: 1.25em 0;
+  background-color: $highlight;
+  color: #fff;
+  text-align: center;
+}
+
+%social-icon {
+  width: 25px; height: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin: 0 .5em;
+}
+
+$icon-types: "twitter", "instagram", "facebook", "youtube";
+@each $icon in $icon-types {
+  .social-icon--#{$icon} {
+    @extend %social-icon;
+    background-image: image-url("#{$icon}.svg");
+  }
+}
+
+.social-icon__text {
+  @extend %visually-hidden;
+}

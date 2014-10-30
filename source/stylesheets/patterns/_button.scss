@@ -1,0 +1,17 @@
+%button {
+  @extend %unstyled-anchor;
+  @extend %primary-title;
+  @include transition(.2s);
+  border: 1px solid #fff;
+  padding: .75em 1.25em;
+  font-size: em(14);
+  margin-top: 2em;
+  font-weight: bold;
+  display: inline-block;
+
+  @include hover {
+    color: $highlight;
+    background-color: #fff;
+  }
+}
+

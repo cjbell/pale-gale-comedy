@@ -1,0 +1,11 @@
+.site-head {
+  background-color: darken($highlight, 5%);
+  @include transition(background-color .25s);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  &:hover {
+    background-color: darken($highlight, 10%);
+  }
+}

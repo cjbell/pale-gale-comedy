@@ -1,0 +1,11 @@
+%l-site-width {
+  max-width: 70em;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+* {
+  @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,11 @@
+%section {
+  padding: 4em 0;
+
+  @include media-query($tablet-min-width) {
+    padding: 6em 0;
+  }
+}
+
+%section__inner {
+  @extend %l-site-width;
+}

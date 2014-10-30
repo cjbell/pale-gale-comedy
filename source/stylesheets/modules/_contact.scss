@@ -1,0 +1,12 @@
+.contact {
+  @extend %section;
+}
+
+.contact__inner {
+  @extend %section__inner;
+  text-align: center;
+}
+
+.contact__title {
+  @extend %section-title;
+}
